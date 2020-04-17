@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--tools:context=".siptools.STPDetailsContent"-->
+
+
+    <com.mns.financialcalculator.StickyHeaderListView.StickyListHeadersListView
+        android:id="@+id/stp_stickyheader"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stp_result_cv"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/stp_result_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/stpcalc_tot_int_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_total_int"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</RelativeLayout>

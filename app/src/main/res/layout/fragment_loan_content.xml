@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.loan.LoanContentFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/ll_eligibility"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/elig_income_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/elig_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/elig_income"
+                        android:inputType="number"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/elig_ex_emi_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/elig_ex_emi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/elig_ex_emi"
+                        android:inputType="number"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/elig_tenure_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/elig_tenure"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/elig_tenure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:singleLine="true" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/elig_int_rate_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/elig_int_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/elig_int_rate"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_elig_calc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/calc_button_tint"
+                    android:elevation="5dp"
+                    android:padding="10dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/btn_csp_calc"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <LinearLayout
+                    android:id="@+id/elig_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/elig_loan_eli"/>
+
+                    <TextView
+                        android:id="@+id/elig_loan_eli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/elig_loan_eli"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/elig_emi" />
+
+                    <TextView
+                        android:id="@+id/elig_emi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/elig_emi"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!--<LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ImageButton
+                            android:id="@+id/btn_viewdocs_elig"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/btn_icon"
+                            android:src="@drawable/ic_viewdocs_bold"
+                            android:tint="@color/calc_button_tint" />
+
+                        <ImageButton
+                            android:id="@+id/btn_share_elig"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/btn_icon"
+                            android:src="@drawable/ic_share"
+                            android:tint="@color/calc_button_tint" />
+
+
+                    </LinearLayout>-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_emiCalc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+              <!--  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_loan_emi"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_height="40sp"
+                        app:cornerRadius="20dp"
+                        android:gravity="center"
+                        android:text="EMI"
+                        android:textColor="@color/bottom_nav_tint"
+                        app:rippleColor="@color/colorAccent"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:backgroundTint="@color/colorPrimary"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_loan_tenure"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_height="40sp"
+                        app:cornerRadius="20dp"
+                        android:gravity="center"
+                        android:text="Tenure"
+                        android:textColor="@color/bottom_nav_tint"
+                        app:rippleColor="@color/colorAccent"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:backgroundTint="@color/colorPrimary"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_loan_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_height="40sp"
+                        app:cornerRadius="20dp"
+                        android:gravity="center"
+                        android:text="Amount"
+                        android:textColor="@color/bottom_nav_tint"
+                        app:rippleColor="@color/colorAccent"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:backgroundTint="@color/colorPrimary"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_loan_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_height="40sp"
+                        app:cornerRadius="20dp"
+                        android:gravity="center"
+                        android:text="Rate"
+                        android:textColor="@color/bottom_nav_tint"
+                        app:rippleColor="@color/colorAccent"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:backgroundTint="@color/colorPrimary"/>
+
+                </LinearLayout>-->
+
+                <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                    android:id="@+id/loan_emicalc_toggle_swt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    custom:cornerRadius="5dp"
+                    custom:activeBgColor="@color/calc_button_tint"
+                    custom:activeTextColor="@android:color/white"
+                    custom:inactiveBgColor="@android:color/white"
+                    custom:inactiveTextColor="@color/gray_text"
+                    custom:separatorColor="@color/black"
+                    custom:toggleWidth="80dp"/>
+
+                <!--<include layout="@layout/fragment_mutual_fund"/>-->
+                <include layout="@layout/fragment_emi_calculation_content"/>
+
+
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

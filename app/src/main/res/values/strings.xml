@@ -1,0 +1,431 @@
+<resources>
+    <string name="app_name">Financial Calculator</string>
+    <string name="title_home">Home</string>
+    <string name="title_loan">Loan</string>
+    <string name="title_investment">Investment</string>
+    <string name="title_tax">Tax</string>
+    <string name="title_user">User</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="fd">Fix Deposit</string>
+    <string name="rd">Rec Deposit</string>
+
+
+    <!-- register activity-->
+    <string name="reg_fn">First Name</string>
+    <string name="reg_ln">Last Name</string>
+    <string name="reg_email">Email Address</string>
+    <string name="reg_phone">Phone Number</string>
+    <string name="reg_pwd">Password</string>
+    <string name="reg_cnf_pwd">Confirm Password</string>
+    <string name="reg_btn_register">Register</string>
+
+    <!-- login activity-->
+    <string name="login_email">Email Address</string>
+    <string name="login_pwd">Password</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_btn_fp">Forgot Password ?</string>
+    <string name="login_btn_signup">Dont have an Account?             Signup now !</string>
+
+    <!-- forgot password activity-->
+    <string name="forpwd_btn_submit">Submit</string>
+
+    <!-- activity main-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Money Plannner</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_siptools">SIP Tools</string>
+    <string name="menu_loantools">Loan Tools</string>
+    <string name="menu_fixeddeposit">Fixed Deposit</string>
+    <string name="menu_recurringdeposit">Recurring Deposit</string>
+    <string name="menu_loanvssip">Loan V/s SIP</string>
+    <string name="menu_myplan">My Plan</string>
+
+    <string name="btn_logout">Log Out</string>
+
+    <!-- nav toolbar-->
+    <string name="siptools_sipc">SIP CALCULATOR</string>
+    <string name="siptools_sipp">SIP PLANNER</string>
+    <string name="siptools_swpc">SWP CALCULATOR</string>
+    <string name="siptools_stpc">STP CALCULATOR</string>
+
+    <string name="loantools_loan_calc">LOAN CALCULATOR</string>
+    <string name="loantools_loan_comp">LOAN COMPARE</string>
+
+    <string name="myplan_sipp">SIP PLAN</string>
+    <string name="myplan_loanp">LOAN PLAN</string>
+    <string name="myplan_fdp">FIXED DEPOSIT PLAN</string>
+    <string name="myplan_insp">INSURANCE PLAN</string>
+
+    <!-- tax frag-->
+    <!-- gst-->
+
+    <string name="gst_inc">Inclusive</string>
+    <string name="gst_exc">Exclusive</string>
+    <string name="gst_init_amt">Initial Amount</string>
+    <string name="gst_net_amt">Net Amount</string>
+    <string name="gst_val_gst">GST</string>
+    <string name="gst_tot_amt">Total Amount</string>
+
+    <!-- loan frag-->
+    <!-- eligibility-->
+
+    <string name="elig_income">Income (per month)</string>
+    <string name="elig_ex_emi">Existing EMI</string>
+    <string name="elig_tenure">Tenure (in Years)</string>
+    <string name="elig_int_rate">Interest Rate (in %)</string>
+    <string name="elig_loan_eli">Loan Eligible</string>
+    <string name="elig_emi">EMI</string>
+
+
+    <!-- sip tools frag -->
+    <!-- sip calc -->
+
+    <string name="st_sipc_mi">Monthly Investment</string>
+    <string name="st_sipc_ten">Tenure</string>
+    <string name="st_sipc_ror">Rate of Return ( in %)</string>
+    <string name="st_sipc_inc">Yearly % increase in Monthly Investment</string>
+    <string name="st_sipc_lump">Lump sum of initial investment</string>
+    <string name="st_sipc_btn">Calculate</string>
+    <string name="st_sipc_ia">Investment Amount</string>
+    <string name="st_sipc_mv">Maturity Value</string>
+
+    <!-- sip planner -->
+
+    <string name="st_sipp_fg">Financial Goal</string>
+    <string name="st_sipp_ror">Rate of Return ( in %)</string>
+    <string name="st_sipp_ip">Investment Period</string>
+    <string name="st_sipp_btn">Calculate</string>
+    <string name="st_sipp_ia">Investment Amount</string>
+    <string name="st_sipp_sv">SIP Value</string>
+
+    <!-- swp calc-->
+    <string name="st_swpc_sa">SWP Amount</string>
+    <string name="st_swpc_iia">Initial Investment Amount</string>
+    <string name="st_swpc_dur">Duration</string>
+    <string name="st_swpc_ror">Rate of Return ( in %)</string>
+    <string name="st_swpc_btn">Calculate</string>
+    <string name="st_swpc_tw">Total Withdrawal</string>
+    <string name="st_swpc_bal">Balance at End</string>
+    <string name="st_swpc_tp">Total Profit</string>
+    <string name="st_swpc_withdr">No. of Withdrawals</string>
+
+
+    <!-- stp calc-->
+    <string name="st_stpc_sa">STP Amount</string>
+    <string name="st_stpc_iia">Initial Investment Amount</string>
+    <string name="st_stpc_inst">No. of installments</string>
+    <string name="st_stpc_ror_transferor">Rate of Return- Transferor ( in %)</string>
+    <string name="st_stpc_ror_transferre">Rate of Return- Transferre ( in %)</string>
+    <string name="st_stpc_btn">Calculate</string>
+    <string name="st_stpc_tat">Total Amount Transferred</string>
+    <string name="st_stpc_bal_feror">Balance in Transferor</string>
+    <string name="st_stpc_bal_ferre">Balance in Transferee</string>
+    <string name="st_stpc_tp">Total Profit</string>
+
+    <string name="st_stpc_view_ferre_scheme">TRANSFERRE SCHEME</string>
+    <string name="st_stpc_view_feror_scheme">TRANSFEROR SCHEME</string>
+
+
+    <!-- loans_tool frag-->
+
+    <!-- loan calculator -->
+
+    <string name="lt_lcalc_la">Loan Amount</string>
+    <string name="lt_lcalc_ten">Tenure</string>
+    <string name="lt_lcalc_ir">Interest Rate ( in %)</string>
+    <string name="lt_lcalc_tv_calc">Calculate</string>
+    <string name="lt_lcalc_sm">Starting Month</string>
+    <string name="lt_lcalc_month">Month</string>
+    <string name="lt_lcalc_btn">Calculate</string>
+    <string name="lt_lcalc_emi">EMI</string>
+    <string name="lt_lcalc_mod_emi">Modified EMI</string>
+
+
+    <!-- loan compare-->
+
+    <string name="lt_lcomp_loan1">Loan1</string>
+    <string name="lt_lcomp_la1">Loan Amount</string>
+    <string name="lt_lcomp_ten1">Tenure (in Months)</string>
+    <string name="lt_lcomp_ir1">Interest Rate ( in %)</string>
+    <string name="lt_lcomp_loan2">Loan2</string>
+    <string name="lt_lcomp_la2">Loan Amount</string>
+    <string name="lt_lcomp_ten2">Tenure (in months)</string>
+    <string name="lt_lcomp_ir2">Interest Rate ( in %)</string>
+    <string name="lt_lcomp_btn">Calculate</string>
+
+    <string name="lt_lcomp_emi">EMI</string>
+    <string name="lt_lcomp_ti">Total Interest</string>
+    <string name="lt_lcomp_tp">Total Paid</string>
+
+
+    <!-- fixed deposit frag-->
+
+    <string name="fd_pa">Principle Amount</string>
+    <string name="fd_ten">Tenure</string>
+    <string name="fd_ir">Interest Rate ( in %)</string>
+    <string name="fd_compounding">Compounding</string>
+    <string name="fd_btn">Calculate</string>
+    <string name="fd_ti">Total Interest</string>
+    <string name="fd_mv">Maturity Value</string>
+
+
+    <!-- recurring deposit frag-->
+
+    <string name="rd_mi">Monthly Investment</string>
+    <string name="rd_ten">Tenure ( in months)</string>
+    <string name="rd_ir">Interest Rate ( in %)</string>
+    <string name="rd_compounding">Compounding</string>
+    <string name="rd_btn">Calculate</string>
+    <string name="rd_ia">Investment Amount</string>
+    <string name="rd_ti">Total Interest</string>
+    <string name="rd_mv">Maturity Value</string>
+
+
+    <!-- loan vs sip frag-->
+
+    <string name="lvs_loan">Loan</string>
+    <string name="lvs_la">Loan amount</string>
+    <string name="lvs_ten1">Tenure (in months)</string>
+    <string name="lvs_ir">Interest Rate ( in %)</string>
+    <string name="lvs_sip">SIP</string>
+    <string name="lvs_mi">Monthly Investment</string>
+    <string name="lvs_ten2">Tenure (in months)</string>
+    <string name="lvs_ror">Rate of Return ( in %)</string>
+    <string name="lvs_btn">Calculate</string>
+
+    <string name="lvs_tp">Total Paid</string>
+    <string name="lvs_ip">Interest Paid</string>
+    <string name="lvs_emi">EMI</string>
+    <string name="lvs_mv">Maturity Value</string>
+    <string name="lvs_ng">Net Gain</string>
+
+
+    <!-- my plan frag-->
+
+    <string name="myplan_text">There is no plan available</string>
+
+    <!-- card view fab menu-->
+    <string name="myplan_fabmenu_sip">SIP</string>
+    <string name="myplan_fabmenu_loan">Loan</string>
+    <string name="myplan_fabmenu_fd">Fix Deposit</string>
+    <string name="myplan_fabmenu_ins">Insurance</string>
+
+    <!-- card_layout_sip-->
+    <string name="cls_plan_name">Plan Name:</string>
+    <string name="cls_inv">Investment</string>
+    <string name="cls_ten">Tenure</string>
+    <string name="cls_rate">Rate</string>
+    <string name="cls_init">Init Investment</string>
+    <string name="cls_yrate">Yearly Rate</string>
+    <string name="cls_sdate">Start Date</string>
+    <string name="cls_to_inv">Total Investment</string>
+    <string name="cls_mv">Maturity Value</string>
+    <string name="cls_bt_v">View</string>
+    <string name="cls_bt_e">Edit</string>
+    <string name="cls_bt_d">Delete</string>
+
+    <!-- card_layout_loan-->
+    <string name="cll_pn">Plan Name:</string>
+    <string name="cll_lt">Loan Type</string>
+    <string name="cll_sdate">Start Date</string>
+    <string name="cll_la">Loan Amount</string>
+    <string name="cll_dura">Duration</string>
+    <string name="cll_ir">Interest Rate</string>
+    <string name="cll_to_paid">Total Paid</string>
+    <string name="cll_to_int">Total Interest</string>
+    <string name="cll_emi">EMI</string>
+    <string name="cll_btn_v">View</string>
+    <string name="cll_btn_e">Edit</string>
+    <string name="cll_btn_d">Delete</string>
+
+    <!-- card_layout_fixdeposit-->
+    <string name="clf_pn">Plan Name:</string>
+    <string name="clf_pa">Principal Amount</string>
+    <string name="clf_ten">Tenure</string>
+    <string name="clf_ir">Interest Rate</string>
+    <string name="clf_comp">Compounding</string>
+    <string name="clf_sdate">Start Date</string>
+    <string name="clf_to_mat">Total Maturity</string>
+    <string name="clf_to_int">Total Interest</string>
+    <string name="clf_btn_v">View</string>
+    <string name="clf_btn_e">Edit</string>
+    <string name="clf_btn_d">Delete</string>
+
+    <!-- card_layout_insurance-->
+    <string name="cli_poli_name">Policy Name:</string>
+    <string name="cli_pm">Payment Method</string>
+    <string name="cli_pd">Premium Date</string>
+    <string name="cli_pa">Premium Amount</string>
+    <string name="cli_poli_num">Policy No.</string>
+    <string name="cli_btn_e">Edit</string>
+    <string name="cli_btn_d">Delete</string>
+
+    <!-- create SIP plan-->
+    <string name="csp_spa">SIP Plan Name</string>
+    <string name="csp_mi">Monthly Investment</string>
+    <string name="csp_ten">Tenure</string>
+    <string name="csp_ror">Rate of Return( in %)</string>
+    <string name="csp_inc">Yearly % increase in Monthly Investment</string>
+    <string name="csp_lump">Lump sum of initial investment</string>
+    <string name="csp_sdate">Starting Date</string>
+    <string name="csp_bank">Bank Name</string>
+    <string name="btn_csp_month">Month</string>
+    <string name="csp_note">Note</string>
+    <string name="btn_csp_calc">CALCULATE</string>
+    <string name="csp_ia">Investment Amount</string>
+    <string name="csp_mv">Maturity Value</string>
+
+
+    <!-- create loan plan-->
+    <string name="clp_lt">Loan Type</string>
+    <string name="clp_lpa">Loan Plan Name</string>
+    <string name="clp_la">Loan Amount</string>
+    <string name="clp_dura">Duration</string>
+    <string name="clp_ir">Interest Rate( in %)</string>
+    <string name="clp_sdate">Starting Date</string>
+    <string name="clp_bank">Bank Name</string>
+    <string name="btn_clp_month">Month</string>
+    <string name="clp_note">Note</string>
+    <string name="btn_clp_calc">CALCULATE</string>
+    <string name="clp_tp">Total Paid</string>
+    <string name="clp_ti">Total Interest</string>
+    <string name="clp_emi">EMI</string>
+
+    <!-- create fd plan-->
+    <string name="cdp_fpn">Fix Deposit Plan Name</string>
+    <string name="cdp_pa">Principal Amount</string>
+    <string name="cdp_ten">Tenure</string>
+    <string name="cdp_ir">Interest Rate( in %)</string>
+    <string name="cdp_ci">Compounding Interest</string>
+    <string name="cdp_sdate">Starting Date</string>
+    <string name="cdp_bank">Bank Name</string>
+    <string name="btn_cdp_month">Month</string>
+    <string name="cdp_note">Note</string>
+    <string name="btn_cdp_calc">CALCULATE</string>
+    <string name="cdp_ti">Total Interest</string>
+    <string name="cdp_mv">Maturity Value</string>
+
+    <!-- create insurance plan-->
+    <string name="cip_po_name">Policy Name</string>
+    <string name="cip_pol_no">Policy No.</string>
+    <string name="cip_pm">Payment Mode</string>
+    <string name="cip_pa">Premium Amount</string>
+    <string name="btn_cip_month">Month</string>
+    <string name="cip_term">Term</string>
+    <string name="cip_pd">Premium Date</string>
+    <string name="cip_note">Note</string>
+    <string name="btn_cip_save">SAVE</string>
+
+
+    <!-- view details-->
+    <string name="vd_fd_bal">FD Balance</string>
+    <string name="vd_loan_bal">Balance</string>
+    <string name="vd_month">Month</string>
+    <string name="vd_total">Total</string>
+    <string name="vd_emi">EMI</string>
+    <string name="vd_int">Interest</string>
+    <string name="vd_prin">Principal</string>
+    <string name="vd_emitotal">12345</string>
+    <string name="vd_inttotal">12354</string>
+    <string name="vd_printotal">1254</string>
+    <string name="vd_invtotal">125000</string>
+    <string name="vd_yearno">0</string>
+
+    <string name="vd_bal_bgn">Bal Begin</string>
+    <string name="vd_transf_out">Trasf.Out</string>
+    <string name="vd_balan">Bal</string>
+    <string name="vd_transf_in">Transf. In</string>
+    <string name="vd_total_int">Total Interest:</string>
+    <string name="vd_total_inv">Total Investment:</string>
+    <string name="vd_inv">Investment:</string>
+    <string name="vd_year">Year:</string>
+
+    <string name="vd_toolbar_name">Detail</string>
+
+    <string name="sip_vd_month">Month</string>
+    <string name="sip_vd_int">Interest</string>
+    <string name="sip_vd_bal">Balance</string>
+
+    <string name="swp_tot_with">Total Withdrawal:</string>
+    <string name="sip_swp_amt">SWP Amount:</string>
+
+
+    <!--dialog -->
+    <string name="dialogTitle">Money Planner</string>
+    <string name="dialogDeleteMessage">Do you want to Delete this plan?</string>
+    <string name="dialogExitMessage">Are you sure you want to exit?</string>
+    <string name="dialogCancelBtn">CANCEL</string>
+    <string name="dialogOkBtn">OK</string>
+
+    <!-- create plan title-->
+    <string name="create_sip_plan">Create SIP Plan</string>
+    <string name="create_fd_plan">Create FixDeposit Plan</string>
+    <string name="create_loan_plan">Create Loan Plan</string>
+    <string name="create_ins_plan">Create Insurance Plan</string>
+
+    <!-- update plan title-->
+    <string name="update_sip_plan">Update SIP Plan</string>
+    <string name="update_fd_plan">Update FixDeposit Plan</string>
+    <string name="update_loan_plan">Update Loan Plan</string>
+    <string name="update_ins_plan">Update Insurance Plan</string>
+
+
+    <!-- spinners -->
+
+    <string-array name="loanplan_arrays">
+        <item>Home Loan</item>
+        <item>Car Loan</item>
+        <item>Gold Loan</item>
+        <item>Personal Loan</item>
+        <item>Educational Loan</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="loantools_arrays">
+        <item>EMI</item>
+        <item>Tenure</item>
+        <item>Amount</item>
+        <item>Rate</item>
+
+    </string-array>
+
+
+    <string-array name="fixeddeposit_arrays">
+        <item>Monthly</item>
+        <item>Quaterly</item>
+        <item>Half-Yearly</item>
+        <item>Yearly</item>
+
+    </string-array>
+
+    <string-array name="recdepo_arrays">
+        <item>Quaterly</item>
+
+    </string-array>
+
+    <string-array name="recurringdeposit_arrays">
+        <item>6</item>
+        <item>9</item>
+        <item>12</item>
+        <item>15</item>
+        <item>18</item>
+        <item>24</item>
+        <item>30</item>
+        <item>36</item>
+        <item>48</item>
+        <item>60</item>
+        <item>84</item>
+        <item>120</item>
+
+
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.loan.emiCalculation.EmiCalculationContentFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_loanCalc_emi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:visibility="visible">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_emi_loan_amt_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_emi_loan_amt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_la"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/loancalc_emi_ten_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_loanCalcTenure_emi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_weight="1.5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/loancalc_emi_ten"
+                            android:hint="@string/lt_lcalc_ten"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:inputType="number"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Switch
+                        android:id="@+id/swt_loanCalc_emi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:padding="10dp"/>
+
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_emi_int_rate_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_emi_int_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_ir"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lt_lcalc_sm"
+                    android:layout_marginTop="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_loantools_month_emi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_calendar"
+                    android:padding="10dp"
+                    android:layout_marginTop="30dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/lt_lcalc_month"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_loancalc_calc_emi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:elevation="5dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:backgroundTint="@color/calc_button_tint"
+                    android:text="@string/lt_lcalc_btn"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+
+                <LinearLayout
+                    android:id="@+id/loancalc_emi_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcomp_tp" />
+
+                    <TextView
+                        android:id="@+id/loancalc_es_tot_paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcomp_tp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcomp_ti" />
+
+                    <TextView
+                        android:id="@+id/loancalc_es_tot_int"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcomp_ti"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcalc_emi" />
+
+                    <TextView
+                        android:id="@+id/loancalc_es_emi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcalc_emi"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageButton
+                            android:id="@+id/btn_viewdocs_lt_emi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_viewdocs_bold"
+                            android:tint="@color/calc_button_tint"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/btn_icon"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_share_lt_emi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_share"
+                            android:tint="@color/calc_button_tint"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/btn_icon"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_loanCalc_tenure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_ten_loan_amt_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_ten_loan_amt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_la"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_ten_int_rate_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_ten_int_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_ir"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_ten_emi_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_ten_emi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_emi"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lt_lcalc_sm"
+                    android:layout_marginTop="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_loantools_month_ten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_calendar"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:text="@string/lt_lcalc_month"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_loancalc_calc_ten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:elevation="5dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:backgroundTint="@color/calc_button_tint"
+                    android:text="@string/lt_lcalc_btn"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+
+                <LinearLayout
+                    android:id="@+id/loancalc_tenure_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcomp_tp" />
+
+                    <TextView
+                        android:id="@+id/loancalc_ts_tot_paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcomp_tp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcomp_ti" />
+
+                    <TextView
+                        android:id="@+id/loancalc_ts_tot_int"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcomp_ti"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcalc_ten" />
+
+                    <TextView
+                        android:id="@+id/loancalc_ts_ten"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcalc_ten"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcalc_mod_emi" />
+
+                    <TextView
+                        android:id="@+id/loancalc_ts_modified_emi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcalc_mod_emi"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageButton
+                            android:id="@+id/btn_viewdocs_lt_tenure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_viewdocs_bold"
+                            android:tint="@color/calc_button_tint"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/btn_icon"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_share_lt_tenure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_share"
+                            android:tint="@color/calc_button_tint"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/btn_icon"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_loanCalc_amt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:id="@+id/loancalc_amt_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_amt_loanCalcTenure"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_weight="1.5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/loancalc_amt_ten"
+                            android:hint="@string/lt_lcalc_ten"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:inputType="number"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Switch
+                        android:id="@+id/swt_loanCalc_amt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:padding="10dp"/>
+
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_amt_int_rate_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_amt_int_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_ir"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_amt_emi_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_amt_emi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_emi"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lt_lcalc_sm"
+                    android:layout_marginTop="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_loantools_month_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_calendar"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:layout_marginTop="30dp"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/lt_lcalc_month"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_loancalc_calc_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:elevation="5dp"
+                    android:layout_marginBottom="30dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:backgroundTint="@color/calc_button_tint"
+                    android:text="@string/lt_lcalc_btn"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+
+                <LinearLayout
+                    android:id="@+id/loancalc_amount_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcomp_tp" />
+
+                    <TextView
+                        android:id="@+id/loancalc_as_tot_paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcomp_tp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcomp_ti" />
+
+                    <TextView
+                        android:id="@+id/loancalc_as_tot_int"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcomp_ti"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcalc_la" />
+
+                    <TextView
+                        android:id="@+id/loancalc_as_loan_amt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcalc_la"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageButton
+                            android:id="@+id/btn_viewdocs_lt_amt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_viewdocs_bold"
+                            android:tint="@color/calc_button_tint"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/btn_icon"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_share_lt_amt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_share"
+                            android:tint="@color/calc_button_tint"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/btn_icon"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_loanCalc_rate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_rate_loan_amt_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_rate_loan_amt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_la"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/loancalc_rate_ten_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_rate_loanCalcTenure"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_weight="1.5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/loancalc_rate_ten"
+                            android:hint="@string/lt_lcalc_ten"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:inputType="number"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Switch
+                        android:id="@+id/swt_loanCalc_rate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:padding="10dp"/>
+
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_rate_int_rate_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_rate_int_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_ir"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loancalc_rate_emi_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loancalc_rate_emi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lt_lcalc_emi"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lt_lcalc_sm"
+                    android:layout_marginTop="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_loantools_month_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_calendar"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:text="@string/lt_lcalc_month"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_loancalc_calc_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:elevation="5dp"
+                    android:layout_marginBottom="30dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:backgroundTint="@color/calc_button_tint"
+                    android:text="@string/lt_lcalc_btn"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+
+                <LinearLayout
+                    android:id="@+id/loancalc_rate_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcomp_tp" />
+
+                    <TextView
+                        android:id="@+id/loancalc_rs_tot_paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcomp_tp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcomp_ti" />
+
+                    <TextView
+                        android:id="@+id/loancalc_rs_tot_int"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcomp_ti"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/lt_lcalc_ir" />
+
+                    <TextView
+                        android:id="@+id/loancalc_rs_int_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="@string/lt_lcalc_ir"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageButton
+                            android:id="@+id/btn_viewdocs_lt_rate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_viewdocs_bold"
+                            android:tint="@color/calc_button_tint"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/btn_icon"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_share_lt_rate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_share"
+                            android:tint="@color/calc_button_tint"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/btn_icon"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+

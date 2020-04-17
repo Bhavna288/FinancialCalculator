@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.tax.gst.GstContentFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_gst_det"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/gst_init_amt_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gst_init_amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/gst_init_amt"
+                android:singleLine="true"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seekBar_gst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_max="28"
+                app:isb_min="5"
+                app:isb_progress="5"
+                app:isb_seek_smoothly="true"
+                app:isb_ticks_count="5"
+                app:isb_show_tick_marks_type="oval"
+                app:isb_tick_marks_size="13dp"
+                app:isb_tick_marks_drawable="@drawable/round_circle"
+                app:isb_show_tick_texts="true"
+                app:isb_tick_texts_size="15sp"
+                app:isb_tick_texts_color="@color/gray_text"
+                app:isb_thumb_color="@color/colorAccent"
+                app:isb_thumb_size="20dp"
+                app:isb_show_indicator="rounded_rectangle"
+                app:isb_indicator_color="@color/colorAccent"
+                app:isb_indicator_text_color="@color/colorPrimary"
+                app:isb_indicator_text_size="18sp"
+                app:isb_track_background_color="@color/gray_bg"
+                app:isb_track_background_size="2dp"
+                app:isb_track_progress_color="@color/gray_bg"
+                app:isb_track_progress_size="4dp"
+                app:isb_only_thumb_draggable="false" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:weightSum="9"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="5%"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="12%"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="15%"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="18%"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="28%"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+       <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_gst_inc"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_height="40sp"
+                app:cornerRadius="20dp"
+                android:gravity="center"
+                android:text="@string/gst_inc"
+                android:textColor="@color/bottom_nav_tint"
+                app:rippleColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_gst_exc"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_height="40sp"
+                app:cornerRadius="20dp"
+                android:gravity="center"
+                android:text="@string/gst_exc"
+                android:textColor="@color/bottom_nav_tint"
+                app:rippleColor="@color/colorAccent"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/colorPrimary"/>
+
+        </LinearLayout>-->
+
+        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+            android:id="@+id/gst_toggle_swt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            custom:cornerRadius="5dp"
+            custom:activeBgColor="@color/calc_button_tint"
+            custom:activeTextColor="@android:color/white"
+            custom:inactiveBgColor="@android:color/white"
+            custom:inactiveTextColor="@color/gray_text"
+            custom:separatorColor="@color/gray_light"
+            custom:textToggleLeft="@string/gst_inc"
+            custom:textToggleRight="@string/gst_exc"
+            custom:toggleWidth="140dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_gst_calc"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:elevation="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="@color/calc_button_tint"
+            android:text="@string/fd_btn"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/gst_inc_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/gst_net_amt" />
+
+            <TextView
+                android:id="@+id/gst_inc_net_amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="@string/gst_net_amt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/gst_val_gst" />
+
+            <TextView
+                android:id="@+id/gst_inc_gst_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="@string/gst_val_gst"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/gst_tot_amt" />
+
+            <TextView
+                android:id="@+id/gst_inc_tot_amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="@string/gst_tot_amt"
+                android:textStyle="bold" />
+
+
+
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageButton
+                    android:id="@+id/btn_viewdocs_fd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_viewdocs_bold"
+                    android:tint="@color/calc_button_tint"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/btn_icon"/>
+
+                <ImageButton
+                    android:id="@+id/btn_share_fd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_share"
+                    android:tint="@color/calc_button_tint"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/btn_icon"/>
+
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/gst_exc_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/gst_net_amt" />
+
+                <TextView
+                    android:id="@+id/gst_exc_net_amt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:text="@string/gst_net_amt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/gst_val_gst" />
+
+                <TextView
+                    android:id="@+id/gst_exc_gst_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:text="@string/gst_val_gst"
+                    android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/gst_tot_amt" />
+
+            <TextView
+                android:id="@+id/gst_exc_tot_amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="@string/gst_tot_amt"
+                android:textStyle="bold" />
+
+
+
+            <!--    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_viewdocs_fd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_viewdocs_bold"
+                        android:tint="@color/calc_button_tint"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/btn_icon"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_share_fd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_share"
+                        android:tint="@color/calc_button_tint"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/btn_icon"/>
+
+
+                </LinearLayout>-->
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

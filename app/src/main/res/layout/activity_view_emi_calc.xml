@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.loan.ViewEmiCalc">
+
+    <include layout="@layout/common_toolbar_layout"/>
+
+
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_month"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="1.97"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_weight="0.03"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_emi"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="1.97"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_weight="0.03"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_int"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="1.97"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_weight="0.03"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_prin"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="1.97"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_weight="0.03"/>
+
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_loan_bal"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="2" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"/>
+
+
+
+    &lt;!&ndash;<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_loan_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>&ndash;&gt;
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"/>-->
+
+    <com.mns.financialcalculator.StickyHeaderListView.StickyListHeadersListView
+        android:id="@+id/loanview_stickyheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_total"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="1.97"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_weight="0.03"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_emitotal"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="1.97"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_weight="0.03"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_inttotal"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="1.97"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_weight="0.03"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_printotal"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="1.97"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_weight="0.03"/>
+
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_weight="2" />
+
+
+
+
+
+    </LinearLayout>-->
+
+
+
+</LinearLayout>

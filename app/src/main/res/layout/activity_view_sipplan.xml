@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.investment.ViewSIPPlan"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_layout"
+        android:id="@+id/vd_toolbar" />
+
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sip_view_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vd_toolbar"
+        android:layout_above="@id/tot_card_sipplan"
+        android:nestedScrollingEnabled="true"/>-->
+
+    <com.mns.financialcalculator.StickyHeaderListView.StickyListHeadersListView
+        android:id="@+id/sip_view_sticky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vd_toolbar"
+        android:layout_above="@id/tot_card_sipplan"/>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tot_card_sipplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true">
+
+
+            <TextView
+                android:id="@+id/view_sip_totinv"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/vd_total_inv"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:background="@color/gray"/>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

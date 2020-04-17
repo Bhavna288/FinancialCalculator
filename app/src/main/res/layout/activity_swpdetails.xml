@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.investment.SWPDetails"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_layout"
+        android:id="@+id/vd_toolbar"/>
+
+
+<com.mns.financialcalculator.StickyHeaderListView.StickyListHeadersListView
+        android:id="@+id/swp_stickyheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vd_toolbar"
+        android:layout_above="@id/cv_swp_tot_with"/>
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/swp_view_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vd_toolbar"
+        android:layout_above="@id/cv_swp_tot_with"/>-->
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv_swp_tot_with"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_swp_cv_tot_with"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/swp_tot_with"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="@color/gray"
+            android:padding="5dp"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</RelativeLayout>
+

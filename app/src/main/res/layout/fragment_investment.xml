@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/frag_investment_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        app:tabMode="fixed"
+        android:layout_margin="10dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:tabIndicatorHeight="30sp"
+        app:tabIndicator="@drawable/selectedtabcolor"
+        app:tabBackground="@drawable/unselectedtabcolor"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@color/bottom_nav_tint">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fixed Deposit" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mutual Fund" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Goal" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- add view pager below -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/frag_investment_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

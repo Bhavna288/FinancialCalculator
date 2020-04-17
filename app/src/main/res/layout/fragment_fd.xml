@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/parent_ll_fd">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/frag_fd_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        app:tabMode="fixed"
+        android:layout_margin="10dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:tabUnboundedRipple="true"
+        app:tabIndicatorHeight="30sp"
+        app:tabIndicator="@drawable/selectedtabcolor"
+        app:tabBackground="@drawable/unselectedtabcolor"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@color/bottom_nav_tint">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabitem_fd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fixed deposit" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabitem_rd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recurring deposit" />
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- add view pager below -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/frag_fd_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+
+</LinearLayout>

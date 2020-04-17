@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@android:color/white</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">#f27d14</color>
+
+    <color name="fabcolor">#fd034f</color>
+    <color name="navDrawer">#f951b4</color>
+    <color name="plansvalue">#E91BB2EE</color>
+    <color name="fab_ripple_color">#BCF1236A</color>
+    <color name="calc_button_tint">#f27d14</color>
+    <color name="tab_text_color">#C6F8F8F8</color>
+    <color name="view_color">#F2FFFFFF</color>
+    <color name="sip_header">#54111111</color>
+    <color name="bottom_nav_tint">#9B9B9B</color>
+    <color name="btn_signout_btint">#63C402</color>
+    <color name="btn_icon">#FAFAFA</color>
+    <color name="btn_calendar">#A3ECEAEA</color>
+    <color name="gray_text">#7b7b7b</color>
+    <color name="lt_gray_bg">#f0f0f0</color>
+    <color name="gray_bg_total">#CBCBCB</color>
+    <color name="gray_bg">#BCBCBC</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+</resources>

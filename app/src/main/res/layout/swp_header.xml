@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/swp_header_tv_yr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_year"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_tv"
+            android:textColor="@android:color/white"
+            android:layout_weight="0.4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"/>
+
+        <TextView
+            android:id="@+id/swp_header_tv_swpamt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sip_swp_amt"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_tv"
+            android:textColor="@android:color/white"
+            android:layout_weight="1.8"/>
+
+
+
+    </LinearLayout>
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/swp_header_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false" /> -->
+</LinearLayout>

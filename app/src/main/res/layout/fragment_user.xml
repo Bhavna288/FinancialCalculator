@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.user.UserFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="20dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:padding="20dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_user_transparent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Guest"
+                    android:layout_gravity="center"
+                    android:textStyle="normal"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/loggedin_user_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/btn_logout"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:cornerRadius="30sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="@color/colorAccent" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_guest_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/reg_btn_register"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:cornerRadius="30sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="OR"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/login_btn_login"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:gravity="center"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:cornerRadius="30sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_margin="20dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

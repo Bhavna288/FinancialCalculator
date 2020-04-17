@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:id="@+id/ll_stpviewdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/stp_view_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_month"
+            android:textColor="@color/gray_text"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/stp_view_bal_begin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_bal_bgn"
+            android:textColor="@color/gray_text"
+            android:gravity="center"
+            android:layout_weight="2.2"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+
+        <TextView
+            android:id="@+id/stp_view_trans_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_transf_out"
+            android:textColor="@color/gray_text"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/stp_view_int"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_int"
+            android:textColor="@color/gray_text"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+
+        <TextView
+            android:id="@+id/stp_view_bal"
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vd_balan"
+            android:textColor="@color/gray_text"
+            android:gravity="center"
+            android:layout_weight="1.8" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"/>
+
+
+</LinearLayout>

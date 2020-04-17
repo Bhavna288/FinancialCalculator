@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.mns.financialcalculator.fragments.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_loan"
+        android:name="com.mns.financialcalculator.fragments.loan.LoanFragment"
+        android:label="@string/title_loan"
+        tools:layout="@layout/fragment_loan" />
+
+    <fragment
+        android:id="@+id/navigation_investment"
+        android:name="com.mns.financialcalculator.fragments.investment.InvestmentFragment"
+        android:label="@string/title_investment"
+        tools:layout="@layout/fragment_investment" />
+
+    <fragment
+        android:id="@+id/navigation_tax"
+        android:name="com.mns.financialcalculator.fragments.tax.TaxFragment"
+        android:label="@string/title_tax"
+        tools:layout="@layout/fragment_tax" />
+
+    <fragment
+        android:id="@+id/navigation_user"
+        android:name="com.mns.financialcalculator.fragments.user.UserFragment"
+        android:label="@string/title_user"
+        tools:layout="@layout/fragment_user" />
+
+
+</navigation>
